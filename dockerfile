@@ -1,5 +1,4 @@
-FROM php:apache
-FROM devopsedu/webapp
-COPY . /var/www/html
+FROM mattrayner/lamp
 RUN rm /var/www/html/index.html
-CMD apachectl -D FOREGROUND
+COPY . /var/www/html
+CMD ["/run.sh"]
